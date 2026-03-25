@@ -91,28 +91,103 @@
     });
   });
 
-  /* ── Contact form handler ───────────────────────────────── */
+  /* ── Contact form handler (Training Request) ───────────────── */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
+      // Honeypot check
+      const honeypot = contactForm.querySelector('input[name="website"]');
+      if (honeypot && honeypot.value) {
+        console.warn('Honeypot triggered, spam detected');
+        return;
+      }
+
+      // Check at least one day selected
+      const daysCheckboxes = contactForm.querySelectorAll('input[name="days"]');
+      const daysSelected = Array.from(daysCheckboxes).some(cb => cb.checked);
+      const daysError = document.getElementById('daysError');
+      
+      if (!daysSelected) {
+        if (daysError) daysError.style.display = 'block';
+        return;
+      }
+      if (daysError) daysError.style.display = 'none';
+
+      // Gather form data
+      const formData = new FormData(contactForm);
+      const parentName = formData.get('parentName');
+      const playerName = formData.get('playerName');
+      const playerAge = formData.get('playerAge');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const sport = formData.get('sport');
+      const experience = formData.get('experience');
+      const program = formData.get('program');
+      const goals = formData.get('goals');
+      
+      // Collect selected days
+      const selectedDays = Array.from(daysCheckboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value)
+        .join(', ');
+
+      // Build mailto subject and body
+      const subject = `Training Request from ${parentName} for ${playerName}`;
+      const body = `
+Training Request Submission
+
+PARENT/GUARDIAN INFORMATION
+Name: ${parentName}
+Email: ${email}
+Phone: ${phone}
+
+ATHLETE INFORMATION
+Name: ${playerName}
+Age: ${playerAge}
+Sport: ${sport}
+Experience Level: ${experience}
+
+SESSION PREFERENCES
+Preferred Program: ${program}
+Preferred Days: ${selectedDays}
+
+GOALS & NOTES
+${goals}
+
+---
+This is an automated request from the Flemington Footy Academy website.
+      `.trim();
+
+      const mailtoLink = `mailto:dannywhite908@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Try to open email client
       const submitBtn = contactForm.querySelector('.contact-submit-btn');
       const originalText = submitBtn.textContent;
 
-      submitBtn.textContent = 'Sending…';
+      // Show loading state briefly
+      submitBtn.textContent = 'Opening email…';
       submitBtn.disabled = true;
 
-      // Placeholder: replace setTimeout with a real backend/API call to persist the booking.
+      // Small delay, then show success
       setTimeout(() => {
-        contactForm.style.display = 'none';
-        const successMsg = document.getElementById('formSuccess');
-        if (successMsg) {
-          successMsg.classList.add('show');
-        }
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 1200);
+        window.location.href = mailtoLink;
+
+        // Fallback: show success message even if email didn't open
+        setTimeout(() => {
+          contactForm.style.display = 'none';
+          const successMsg = document.getElementById('formSuccess');
+          if (successMsg) {
+            successMsg.style.display = 'block';
+          }
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          
+          // Scroll to success message
+          successMsg?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 600);
+      }, 300);
     });
   }
 

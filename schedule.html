@@ -14,7 +14,7 @@
   <nav class="navbar scrolled" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand" aria-label="Flemington Footy Academy Home">
-        <div class="nav-logo-mark" aria-hidden="true">FA</div>
+        <img src="images/FFA1.svg" alt="Flemington Footy Academy" class="nav-logo-mark" />
         <div class="nav-brand-text">
           <span class="nav-brand-name">Flemington Footy</span>
           <span class="nav-brand-sub">Academy</span>
@@ -59,144 +59,90 @@
     </div>
   </header>
 
-  <!-- ══ SCHEDULE ═════════════════════════════════════════════ -->
-  <section class="schedule-section section-pad" aria-label="Schedule and booking">
+  <!-- ══ SCHEDULE INFO ══════════════════════════════════════════ -->
+  <section class="schedule-section section-pad" aria-label="Availability and programs">
     <div class="container">
-      <div class="schedule-layout">
+      <div class="text-center reveal" style="margin-bottom:48px;">
+        <span class="section-label">Available Times</span>
+        <h2 class="section-title">Training Hours &amp; Programs</h2>
+        <p class="section-subtitle" style="margin:0 auto;margin-bottom:48px;">
+          We offer flexible scheduling across a variety of programs designed to fit your goals.
+        </p>
+      </div>
 
-        <!-- ── Main calendar + slots ── -->
-        <div>
+      <div class="services-grid">
+        <!-- Availability Card -->
+        <article class="service-card featured reveal">
+          <div class="service-card-icon" aria-hidden="true">🕐</div>
+          <h3 class="service-card-name">Training Windows</h3>
+          <p class="service-card-desc">
+            Sessions available Monday through Saturday, 8:00 AM to 6:00 PM. We can work with your schedule to find a time that works best for you and your athlete.
+          </p>
+          <ul class="service-card-features" aria-label="Availability details">
+            <li class="feature-item"><span class="feature-check" aria-hidden="true">✓</span> Flexible scheduling</li>
+            <li class="feature-item"><span class="feature-check" aria-hidden="true">✓</span> 1-hour sessions</li>
+            <li class="feature-item"><span class="feature-check" aria-hidden="true">✓</span> Available year-round</li>
+          </ul>
+        </article>
 
-          <!-- Calendar -->
-          <div class="calendar-wrapper" role="application" aria-label="Training calendar">
-            <div class="calendar-header">
-              <button class="cal-nav-btn" id="calPrev" aria-label="Previous month">&#8249;</button>
-              <h2 class="calendar-title" id="calMonthYear" aria-live="polite"></h2>
-              <button class="cal-nav-btn" id="calNext" aria-label="Next month">&#8250;</button>
-            </div>
-
-            <div class="calendar-body">
-              <!-- Weekday headers -->
-              <div class="calendar-weekdays" aria-hidden="true">
-                <div class="calendar-weekday">Sun</div>
-                <div class="calendar-weekday">Mon</div>
-                <div class="calendar-weekday">Tue</div>
-                <div class="calendar-weekday">Wed</div>
-                <div class="calendar-weekday">Thu</div>
-                <div class="calendar-weekday">Fri</div>
-                <div class="calendar-weekday">Sat</div>
-              </div>
-
-              <!-- Days (rendered by JS) -->
-              <div class="calendar-days" id="calDays" role="grid" aria-label="Calendar days"></div>
-            </div>
-          </div>
-
-          <!-- Available slots for selected date -->
-          <div class="slots-panel" id="slotsPanel" aria-label="Available time slots" aria-live="polite">
-            <div class="slots-panel-header">
-              <span class="slots-date" id="slotsDate">Select a date</span>
-              <span class="slots-count" id="slotsCount"></span>
-            </div>
-            <div class="slots-body" id="slotsBody"></div>
-          </div>
-
-        </div>
-
-        <!-- ── Sidebar ── -->
-        <aside class="schedule-sidebar" aria-label="Booking information">
-
-          <!-- Service selector -->
-          <div class="sidebar-card service-select-card">
-            <div class="sidebar-card-header">Select Service</div>
-            <div class="sidebar-card-body">
-              <div class="service-select-option" data-service="speed" role="button" tabindex="0" aria-label="Speed and Agility $50/hr">
-                <span class="service-select-name">⚡ Speed &amp; Agility</span>
-                <span class="service-select-price">$50/hr</span>
-              </div>
-              <div class="service-select-option" data-service="sport" role="button" tabindex="0" aria-label="Sport Specific Training $70/hr">
-                <span class="service-select-name">🏆 Sport Specific</span>
-                <span class="service-select-price">$70/hr</span>
-              </div>
-              <div class="service-select-option" data-service="group2" role="button" tabindex="0" aria-label="Small Group 2 people $120/hr">
-                <span class="service-select-name">👥 Group (2 people)</span>
-                <span class="service-select-price">$120/hr</span>
-              </div>
-              <div class="service-select-option" data-service="group3" role="button" tabindex="0" aria-label="Small Group 3 people $180/hr">
-                <span class="service-select-name">👥 Group (3 people)</span>
-                <span class="service-select-price">$180/hr</span>
-              </div>
+        <!-- Speed &amp; Agility -->
+        <article class="service-card reveal">
+          <div class="service-card-icon service-card-icon-gold" aria-hidden="true">⚡</div>
+          <h3 class="service-card-name">Speed &amp; Agility</h3>
+          <p class="service-card-desc">
+            Develop explosive first-step quickness, lateral movement, and top-end speed through scientifically structured drills.
+          </p>
+          <div class="service-card-pricing">
+            <div class="price-row">
+              <span class="price-label">Per hour</span>
+              <span class="price-value">$50</span>
             </div>
           </div>
+        </article>
 
-          <!-- Legend -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-header">Legend</div>
-            <div class="sidebar-card-body">
-              <div class="legend-item">
-                <span class="legend-dot available" aria-hidden="true"></span>
-                Days with available slots
-              </div>
-              <div class="legend-item">
-                <span class="legend-dot today" aria-hidden="true"></span>
-                Today
-              </div>
-              <div class="legend-item">
-                <span class="legend-dot selected" aria-hidden="true"></span>
-                Selected date
-              </div>
+        <!-- Sport Specific -->
+        <article class="service-card reveal">
+          <div class="service-card-icon" aria-hidden="true">🏆</div>
+          <h3 class="service-card-name">Sport Specific Training</h3>
+          <p class="service-card-desc">
+            Training built around your sport's demands — footwork, skills, conditioning, and sport-specific movement patterns.
+          </p>
+          <div class="service-card-pricing">
+            <div class="price-row">
+              <span class="price-label">Per hour</span>
+              <span class="price-value">$70</span>
             </div>
           </div>
+        </article>
 
-          <!-- Booking info -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-header">Booking Info</div>
-            <div class="sidebar-card-body">
-              <div class="booking-info-item">
-                <span class="booking-info-icon" aria-hidden="true">🕐</span>
-                <div>
-                  <div class="booking-info-label">Session Length</div>
-                  All sessions are 1 hour.
-                </div>
-              </div>
-              <div class="booking-info-item">
-                <span class="booking-info-icon" aria-hidden="true">💳</span>
-                <div>
-                  <div class="booking-info-label">Payment</div>
-                  Cash, Venmo, or Zelle. Details provided at booking.
-                </div>
-              </div>
-              <div class="booking-info-item">
-                <span class="booking-info-icon" aria-hidden="true">📅</span>
-                <div>
-                  <div class="booking-info-label">Availability</div>
-                  Monday – Saturday, 8 AM – 6 PM.
-                </div>
-              </div>
-              <div class="booking-info-item">
-                <span class="booking-info-icon" aria-hidden="true">❌</span>
-                <div>
-                  <div class="booking-info-label">Cancellations</div>
-                  Please contact us at least 24 hrs in advance.
-                </div>
-              </div>
+        <!-- Small Group -->
+        <article class="service-card reveal">
+          <div class="service-card-icon service-card-icon-green" aria-hidden="true">👥</div>
+          <h3 class="service-card-name">Small Group Training</h3>
+          <p class="service-card-desc">
+            Train with a friend or teammate in a focused, competitive environment. Available for 2 or 3 people.
+          </p>
+          <div class="service-card-pricing">
+            <div class="price-row">
+              <span class="price-label">2 people / hour</span>
+              <span class="price-value">$120</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">3 people / hour</span>
+              <span class="price-value">$180</span>
             </div>
           </div>
+        </article>
+      </div>
 
-          <!-- Need help? -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-header">Need Help?</div>
-            <div class="sidebar-card-body" style="font-size:0.88rem;color:var(--mid-gray);line-height:1.7;">
-              <p style="margin-bottom:12px;">
-                Can't find a time that works? Reach out and we'll do our best to accommodate you.
-              </p>
-              <a href="contact.html" class="btn btn-navy" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 16px;">
-                Contact Us
-              </a>
-            </div>
-          </div>
-
-        </aside>
+      <!-- CTA -->
+      <div class="text-center reveal" style="margin-top:64px;">
+        <p style="font-size:1.1rem;color:var(--mid-gray);margin-bottom:24px;">
+          Ready to get started? Tell us about your goals and preferred times.
+        </p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;">
+          📝 Request Private Training
+        </a>
       </div>
     </div>
   </section>

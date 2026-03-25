@@ -14,7 +14,7 @@
   <nav class="navbar scrolled" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand" aria-label="Flemington Footy Academy Home">
-        <div class="nav-logo-mark" aria-hidden="true">FA</div>
+        <img src="images/FFA1.svg" alt="Flemington Footy Academy" class="nav-logo-mark" />
         <div class="nav-brand-text">
           <span class="nav-brand-name">Flemington Footy</span>
           <span class="nav-brand-sub">Academy</span>
@@ -28,7 +28,7 @@
         <li><a href="contact.html"  class="nav-link">Contact</a></li>
       </ul>
 
-      <a href="schedule.html" class="btn btn-gold nav-cta">Book a Session</a>
+      <a href="contact.html" class="btn btn-gold nav-cta">Request Training</a>
 
       <button class="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -42,18 +42,18 @@
     <a href="about.html"    class="mobile-nav-link">About</a>
     <a href="schedule.html" class="mobile-nav-link">Schedule</a>
     <a href="contact.html"  class="mobile-nav-link">Contact</a>
-    <a href="schedule.html" class="btn btn-gold" style="margin-top:8px;justify-content:center;">Book a Session</a>
+    <a href="contact.html" class="btn btn-gold" style="margin-top:8px;justify-content:center;">Request Training</a>
   </div>
 
   <!-- ══ PAGE HERO ════════════════════════════════════════════ -->
   <header class="page-hero" aria-labelledby="contact-page-title">
     <div class="container">
       <div class="page-hero-content">
-        <span class="section-label section-label--white">Get In Touch</span>
-        <h1 class="page-hero-title" id="contact-page-title">Contact Us</h1>
+        <span class="section-label section-label--white">Ready to Train</span>
+        <h1 class="page-hero-title" id="contact-page-title">Request Private Training</h1>
         <p class="page-hero-sub">
-          Have questions about our programs or want to book a session?
-          Reach out and we'll get back to you as soon as possible.
+          Tell us about your goals, preferred training times, and what you're looking to achieve.
+          We'll reach out within 24 hours to confirm your session.
         </p>
       </div>
     </div>
@@ -92,10 +92,9 @@
           <div class="contact-info-card reveal">
             <div class="contact-icon" aria-hidden="true">📅</div>
             <div>
-              <div class="contact-info-label">Booking</div>
+              <div class="contact-info-label">Request a Session</div>
               <div class="contact-info-value">
-                Use our <a href="schedule.html" style="color:var(--gold);font-weight:600;">online schedule</a>
-                to view available slots and request a session.
+                Use the form below to request your training session. We offer availability Monday – Saturday, 8 AM – 6 PM.
               </div>
             </div>
           </div>
@@ -138,72 +137,136 @@
         </div>
 
         <!-- ── Right: Contact Form ── -->
-        <div class="contact-form-card reveal" aria-label="Contact form">
-          <h2 class="contact-form-title">Send Us a Message</h2>
+        <div class="contact-form-card reveal" aria-label="Training request form">
+          <h2 class="contact-form-title">Request Your Session</h2>
           <p class="contact-form-desc">
-            Fill in the form below and we'll get back to you promptly.
+            Fill in a few details about your training goals and preferred times. No commitment — just a conversation to make sure we're a good fit.
           </p>
 
-          <form id="contactForm" novalidate aria-label="Contact form">
+          <form id="contactForm" novalidate aria-label="Training request form">
+            <!-- Honeypot field (hidden from users) -->
+            <input type="text" name="website" style="display:none;" tabindex="-1" />
+
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="firstName">First Name *</label>
-                <input class="form-input" type="text" id="firstName" name="firstName"
-                  placeholder="Jane" required />
+                <label class="form-label" for="parentName">Parent/Guardian Name *</label>
+                <input class="form-input" type="text" id="parentName" name="parentName"
+                  placeholder="Your full name" required />
               </div>
               <div class="form-group">
-                <label class="form-label" for="lastName">Last Name *</label>
-                <input class="form-input" type="text" id="lastName" name="lastName"
-                  placeholder="Smith" required />
+                <label class="form-label" for="playerName">Athlete Name *</label>
+                <input class="form-input" type="text" id="playerName" name="playerName"
+                  placeholder="Athlete's name" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="playerAge">Athlete Age *</label>
+                <input class="form-input" type="number" id="playerAge" name="playerAge"
+                  placeholder="e.g., 14" min="1" max="120" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input class="form-input" type="email" id="email" name="email"
+                  placeholder="your@email.com" required />
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="email">Email Address *</label>
-              <input class="form-input" type="email" id="email" name="email"
-                placeholder="jane@example.com" required />
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone Number</label>
+              <label class="form-label" for="phone">Phone Number *</label>
               <input class="form-input" type="tel" id="phone" name="phone"
-                placeholder="(555) 555-5555" />
+                placeholder="(555) 555-5555" required />
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="subject">Subject *</label>
-              <select class="form-select" id="subject" name="subject" required>
-                <option value="">Select a topic…</option>
-                <option value="booking">I want to book a session</option>
-                <option value="pricing">Questions about pricing</option>
-                <option value="programs">Questions about programs</option>
-                <option value="group">Group training enquiry</option>
-                <option value="other">Other</option>
+              <label class="form-label" for="sport">Sport / Activity *</label>
+              <input class="form-input" type="text" id="sport" name="sport"
+                placeholder="e.g., Football, Soccer, Track" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="experience">Experience Level *</label>
+              <select class="form-select" id="experience" name="experience" required>
+                <option value="">Select experience level…</option>
+                <option value="beginner">Beginner (new to structured training)</option>
+                <option value="intermediate">Intermediate (some training experience)</option>
+                <option value="advanced">Advanced (competitive athlete)</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="message">Message *</label>
-              <textarea class="form-input" id="message" name="message" rows="5"
-                placeholder="Tell us a bit about yourself, your sport, and what you're looking to achieve…"
+              <label class="form-label" for="program">Preferred Program *</label>
+              <select class="form-select" id="program" name="program" required>
+                <option value="">Select program…</option>
+                <option value="speed">⚡ Speed &amp; Agility ($50/hr)</option>
+                <option value="sport">🏆 Sport Specific ($70/hr)</option>
+                <option value="group2">👥 Small Group 2 people ($120/hr)</option>
+                <option value="group3">👥 Small Group 3 people ($180/hr)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Preferred Training Days *</label>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:8px;">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="days" value="Monday" />
+                  <span>Monday</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="days" value="Tuesday" />
+                  <span>Tuesday</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="days" value="Wednesday" />
+                  <span>Wednesday</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="days" value="Thursday" />
+                  <span>Thursday</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="days" value="Friday" />
+                  <span>Friday</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="days" value="Saturday" />
+                  <span>Saturday</span>
+                </label>
+              </div>
+              <div id="daysError" style="color:var(--gold-dark);font-size:0.85rem;display:none;margin-top:6px;">Please select at least one day.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="goals">Training Goals *</label>
+              <textarea class="form-input" id="goals" name="goals" rows="4"
+                placeholder="Tell us what your athlete wants to achieve — e.g., improve first step speed, enhance agility, prepare for season, etc."
                 required></textarea>
             </div>
 
+            <label class="checkbox-label" style="margin-top:12px;margin-bottom:24px;">
+              <input type="checkbox" id="confirm" required />
+              <span>I understand this is a training request and we'll reach out within 24 hours to confirm availability and discuss next steps.</span>
+            </label>
+
             <button type="submit" class="btn btn-gold contact-submit-btn"
               style="width:100%;justify-content:center;">
-              Send Message ✉️
+              Submit Request 📧
             </button>
           </form>
 
           <!-- Success message -->
           <div class="form-success-msg" id="formSuccess" role="alert" aria-live="assertive">
             <div class="success-icon" aria-hidden="true">✅</div>
-            <h3 class="success-title" style="font-size:1.4rem;margin-bottom:8px;">Message Sent!</h3>
+            <h3 class="success-title" style="font-size:1.4rem;margin-bottom:8px;">Request Received!</h3>
             <p style="color:var(--mid-gray);font-size:0.95rem;line-height:1.7;margin-bottom:20px;">
-              Thanks for reaching out! We'll get back to you as soon as possible.
+              Thanks for reaching out! We'll review your request and get back to you as soon as possible — typically within 24 hours.
             </p>
-            <a href="schedule.html" class="btn btn-navy" style="width:100%;justify-content:center;">
-              📅 View Schedule
+            <div style="background:rgba(245,166,35,0.06);border-left:4px solid var(--gold);padding:16px;border-radius:4px;margin-bottom:20px;font-size:0.9rem;">
+              <strong>📞 In a rush?</strong> Feel free to call us directly: <strong style="color:var(--green);">908-328-3639</strong>
+            </div>
+            <a href="index.html" class="btn btn-navy" style="width:100%;justify-content:center;">
+              Back to Home
             </a>
           </div>
 
