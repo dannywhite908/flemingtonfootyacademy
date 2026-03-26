@@ -721,9 +721,9 @@ ul { list-style: none; }
   height: 60px;
   border-radius: 50%;
   background: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 1.3rem;
@@ -1012,6 +1012,7 @@ ul { list-style: none; }
   background: var(--gold);
   display: block;
   object-fit: cover;
+  object-position: center top;
   margin: 0 auto 16px;
   border: 4px solid rgba(255,255,255,0.2);
 }
