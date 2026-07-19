@@ -343,123 +343,15 @@
       <!-- CTA -->
       <div class="text-center reveal" style="margin-top:64px;">
         <p style="font-size:1.1rem;color:var(--mid-gray);margin-bottom:24px;">
-          Ready to get started? Tell us your preferred membership level and training times.
+          Ready to get started? Email your class request, athlete age, and preferred day/time.
         </p>
-        <a href="contact.html" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;">
-          📝 Request Membership
+        <a href="mailto:dannywhite908@gmail.com?subject=Class%20Signup%20Request%20-%20Flemington%20Footy%20Academy&body=Hi%20Coach%20Danny%2C%0A%0AI%20want%20to%20sign%20up%20for%20a%20class.%0A%0AClass%20Name%3A%20%0AAthlete%20Name%3A%20%0AAthlete%20Age%3A%20%0APreferred%20Day%2FTime%3A%20%0AMembership%20Tier%3A%20%0AParent%2FGuardian%20Name%3A%20%0APhone%3A%20%0A%0AThanks%21" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;">
+          📧 Email to Sign Up
         </a>
+        <p style="font-size:0.92rem;color:var(--mid-gray);margin-top:14px;">All class signups are handled by email at dannywhite908@gmail.com.</p>
       </div>
     </div>
   </section>
-
-  <!-- ══ BOOKING MODAL ════════════════════════════════════════ -->
-  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
-    <div class="modal">
-
-      <!-- Modal header -->
-      <div class="modal-header">
-        <h3 class="modal-title" id="modalHeading">Confirm Your Booking</h3>
-        <button class="modal-close" id="modalCloseBtn" aria-label="Close booking dialog">&times;</button>
-      </div>
-
-      <!-- Booking form -->
-      <div id="bookingForm">
-        <div class="modal-body">
-          <!-- Summary -->
-          <div class="modal-info-row" aria-label="Booking summary">
-            <div class="modal-info-box">
-              <div class="modal-info-label">Date</div>
-              <div class="modal-info-value" id="modalDate">–</div>
-            </div>
-            <div class="modal-info-box">
-              <div class="modal-info-label">Time</div>
-              <div class="modal-info-value" id="modalTime">–</div>
-            </div>
-          </div>
-          <div class="modal-info-row">
-            <div class="modal-info-box">
-              <div class="modal-info-label">Membership</div>
-              <div class="modal-info-value" id="modalService">–</div>
-            </div>
-            <div class="modal-info-box">
-              <div class="modal-info-label">Monthly</div>
-              <div class="modal-info-value" id="modalPrice">–</div>
-            </div>
-          </div>
-
-          <!-- Form fields -->
-          <form id="bookingFormEl">
-            <div class="form-group">
-              <label class="form-label" for="bookingName">Full Name *</label>
-              <input class="form-input" type="text" id="bookingName" name="name" placeholder="Your full name" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="bookingEmail">Email Address *</label>
-              <input class="form-input" type="email" id="bookingEmail" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="bookingPhone">Phone Number</label>
-              <input class="form-input" type="tel" id="bookingPhone" name="phone" placeholder="(555) 555-5555" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="bookingPayment">Preferred Payment *</label>
-              <select class="form-select" id="bookingPayment" name="payment" required>
-                <option value="">Select payment method…</option>
-                <option value="cash">💵 Cash</option>
-                <option value="venmo">📱 Venmo</option>
-                <option value="zelle">⚡ Zelle</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="bookingNotes">Notes (optional)</label>
-              <textarea class="form-input" id="bookingNotes" name="notes" rows="2" placeholder="Any questions, sport, or special requests…"></textarea>
-            </div>
-          </form>
-        </div>
-
-        <div class="modal-footer">
-          <button class="btn btn-gold" id="confirmBookingBtn" style="flex:1;justify-content:center;" type="button">
-            Confirm Booking
-          </button>
-          <button class="btn btn-outline-gold" id="cancelBookingBtn" style="flex:0 0 auto;" type="button">
-            Cancel
-          </button>
-        </div>
-      </div>
-
-      <!-- Success screen (hidden until submitted) -->
-      <div class="booking-success" id="bookingSuccess" style="display:none;" aria-live="polite">
-        <div class="success-icon" aria-hidden="true">✅</div>
-        <h3 class="success-title">You're Booked!</h3>
-        <p class="success-text">
-          Thanks, <strong id="succName"></strong>! Your session has been reserved.
-          We'll be in touch to confirm details and payment.
-        </p>
-        <div class="success-details" aria-label="Booking confirmation details">
-          <div class="success-detail-row">
-            <span class="success-detail-label">Date</span>
-            <span class="success-detail-value" id="succDate"></span>
-          </div>
-          <div class="success-detail-row">
-            <span class="success-detail-label">Time</span>
-            <span class="success-detail-value" id="succTime"></span>
-          </div>
-          <div class="success-detail-row">
-            <span class="success-detail-label">Membership</span>
-            <span class="success-detail-value" id="succService"></span>
-          </div>
-          <div class="success-detail-row">
-            <span class="success-detail-label">Monthly</span>
-            <span class="success-detail-value" id="succPrice"></span>
-          </div>
-        </div>
-        <button class="btn btn-gold" id="closeSuccessBtn" style="width:100%;justify-content:center;">
-          Done
-        </button>
-      </div>
-
-    </div>
-  </div>
 
   <!-- ══ FOOTER ════════════════════════════════════════════════ -->
   <footer class="footer" aria-label="Site footer">
@@ -517,16 +409,9 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/schedule.js"></script>
+  
   <script>
     document.getElementById('footerYear').textContent = new Date().getFullYear();
-
-    // Wire up the confirm button: requestSubmit() triggers native validation UI
-    // and fires the submit event on the form, which schedule.js listens for.
-    document.getElementById('confirmBookingBtn').addEventListener('click', function () {
-      const form = document.getElementById('bookingFormEl');
-      form.requestSubmit();
-    });
   </script>
 </body>
 </html>
