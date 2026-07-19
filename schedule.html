@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="View available training slots and book your session at Flemington Footy Academy. Sessions available Monday–Saturday." />
   <title>Schedule &amp; Booking | Flemington Footy Academy</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F5A623'/><text y='.9em' font-size='70' x='15' fill='%230D1B2A' font-weight='900' font-family='Arial'>FA</text></svg>" />
+  <link rel="icon" href="images/ffa-logo-2026.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -14,7 +14,7 @@
   <nav class="navbar scrolled" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand" aria-label="Flemington Footy Academy Home">
-        <img src="images/FFA1.svg" alt="Flemington Footy Academy" class="nav-logo-mark" />
+        <img src="images/ffa-logo-2026.png" alt="Flemington Footy Academy" class="nav-logo-mark" />
         <div class="nav-brand-text">
           <span class="nav-brand-name">Flemington Footy</span>
           <span class="nav-brand-sub">Academy</span>
@@ -52,8 +52,8 @@
         <span class="section-label section-label--white">Reserve Your Spot</span>
         <h1 class="page-hero-title" id="schedule-page-title">Schedule &amp; Booking</h1>
         <p class="page-hero-sub">
-          Pick a date, choose your time, and book your training session.
-          Sessions are available Monday–Saturday, 8 AM – 6 PM.
+          Pick a date and preferred time, then request the membership level
+          that fits your monthly training goals.
         </p>
       </div>
     </div>
@@ -64,9 +64,9 @@
     <div class="container">
       <div class="text-center reveal" style="margin-bottom:48px;">
         <span class="section-label">Available Times</span>
-        <h2 class="section-title">Training Hours &amp; Programs</h2>
+        <h2 class="section-title">Training Hours &amp; Membership Levels</h2>
         <p class="section-subtitle" style="margin:0 auto;margin-bottom:48px;">
-          We offer flexible scheduling across a variety of programs designed to fit your goals.
+          We offer flexible scheduling and three monthly membership tiers designed to fit your routine.
         </p>
       </div>
 
@@ -85,51 +85,47 @@
           </ul>
         </article>
 
-        <!-- Speed &amp; Agility -->
+        <!-- Community Member -->
         <article class="service-card reveal">
           <div class="service-card-icon service-card-icon-gold" aria-hidden="true">⚡</div>
-          <h3 class="service-card-name">Speed &amp; Agility</h3>
+          <h3 class="service-card-name">Community Member</h3>
           <p class="service-card-desc">
-            Develop explosive first-step quickness, lateral movement, and top-end speed through scientifically structured drills.
+            Entry-level membership for athletes who want to train consistently each month.
           </p>
           <div class="service-card-pricing">
             <div class="price-row">
-              <span class="price-label">Per hour</span>
-              <span class="price-value">$50</span>
+              <span class="price-label">2 classes per month</span>
+              <span class="price-value">$10</span>
             </div>
           </div>
         </article>
 
-        <!-- Sport Specific -->
+        <!-- Blue & White Member -->
         <article class="service-card reveal">
           <div class="service-card-icon" aria-hidden="true">🏆</div>
-          <h3 class="service-card-name">Sport Specific Training</h3>
+          <h3 class="service-card-name">Blue &amp; White Member</h3>
           <p class="service-card-desc">
-            Training built around your sport's demands — footwork, skills, conditioning, and sport-specific movement patterns.
+            Mid-tier membership for athletes who want more frequent progression.
           </p>
           <div class="service-card-pricing">
             <div class="price-row">
-              <span class="price-label">Per hour</span>
-              <span class="price-value">$70</span>
+              <span class="price-label">4 classes per month</span>
+              <span class="price-value">$30</span>
             </div>
           </div>
         </article>
 
-        <!-- Small Group -->
+        <!-- Eagle Membership -->
         <article class="service-card reveal">
           <div class="service-card-icon service-card-icon-green" aria-hidden="true">👥</div>
-          <h3 class="service-card-name">Small Group Training</h3>
+          <h3 class="service-card-name">Eagle Membership</h3>
           <p class="service-card-desc">
-            Train with a friend or teammate in a focused, competitive environment. Available for 2 or 3 people.
+            Premium tier for committed athletes with full training flexibility.
           </p>
           <div class="service-card-pricing">
             <div class="price-row">
-              <span class="price-label">2 people / hour</span>
-              <span class="price-value">$120</span>
-            </div>
-            <div class="price-row">
-              <span class="price-label">3 people / hour</span>
-              <span class="price-value">$180</span>
+              <span class="price-label">Unlimited classes per month</span>
+              <span class="price-value">$60</span>
             </div>
           </div>
         </article>
@@ -138,10 +134,10 @@
       <!-- CTA -->
       <div class="text-center reveal" style="margin-top:64px;">
         <p style="font-size:1.1rem;color:var(--mid-gray);margin-bottom:24px;">
-          Ready to get started? Tell us about your goals and preferred times.
+          Ready to get started? Tell us your preferred membership level and training times.
         </p>
         <a href="contact.html" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;">
-          📝 Request Private Training
+          📝 Request Membership
         </a>
       </div>
     </div>
@@ -173,11 +169,11 @@
           </div>
           <div class="modal-info-row">
             <div class="modal-info-box">
-              <div class="modal-info-label">Service</div>
+              <div class="modal-info-label">Membership</div>
               <div class="modal-info-value" id="modalService">–</div>
             </div>
             <div class="modal-info-box">
-              <div class="modal-info-label">Price</div>
+              <div class="modal-info-label">Monthly</div>
               <div class="modal-info-value" id="modalPrice">–</div>
             </div>
           </div>
@@ -240,11 +236,11 @@
             <span class="success-detail-value" id="succTime"></span>
           </div>
           <div class="success-detail-row">
-            <span class="success-detail-label">Service</span>
+            <span class="success-detail-label">Membership</span>
             <span class="success-detail-value" id="succService"></span>
           </div>
           <div class="success-detail-row">
-            <span class="success-detail-label">Price</span>
+            <span class="success-detail-label">Monthly</span>
             <span class="success-detail-value" id="succPrice"></span>
           </div>
         </div>
@@ -262,7 +258,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark" aria-hidden="true">FA</div>
+            <img src="images/ffa-logo-2026.png" alt="Flemington Footy Academy logo" class="footer-logo-mark" />
             <div>
               <div class="footer-brand-name">Flemington Footy Academy</div>
               <div class="footer-brand-sub">Elite Athletic Training</div>
@@ -285,10 +281,9 @@
         <div>
           <h4 class="footer-col-title">Programs</h4>
           <ul class="footer-links" role="list">
-            <li><a href="schedule.html" class="footer-link">⚡ Speed &amp; Agility — $50/hr</a></li>
-            <li><a href="schedule.html" class="footer-link">🏆 Sport Specific — $70/hr</a></li>
-            <li><a href="schedule.html" class="footer-link">👥 Group (2) — $120/hr</a></li>
-            <li><a href="schedule.html" class="footer-link">👥 Group (3) — $180/hr</a></li>
+            <li><a href="schedule.html" class="footer-link">⚡ Community Member — $10/month</a></li>
+            <li><a href="schedule.html" class="footer-link">🏆 Blue &amp; White Member — $30/month</a></li>
+            <li><a href="schedule.html" class="footer-link">🦅 Eagle Membership — $60/month</a></li>
           </ul>
         </div>
         <div>

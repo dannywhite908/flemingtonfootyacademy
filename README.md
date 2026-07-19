@@ -12,7 +12,7 @@ We believe the best training starts with a real conversation. Here's how it work
 Visit the **"Request Private Training"** button on any page (or go directly to [contact.html](contact.html)). Fill out a short form with:
 - Your athlete's name and age
 - Sport and experience level
-- Program preference (Speed & Agility, Sport Specific, or Small Group)
+- Membership preference (Community Member, Blue & White Member, or Eagle Membership)
 - Preferred training days
 - Your goals and what you want to achieve
 
@@ -28,16 +28,15 @@ Your session is confirmed, locked in, and personalized to your athlete.
 
 ---
 
-## Programs & Pricing
+## Memberships & Pricing
 
-All sessions are **1 hour**, **Monday–Saturday, 8 AM–6 PM**.
+Training runs **Monday–Saturday, 8 AM–6 PM**.
 
-| Program | Price | Details |
+| Membership | Price | Details |
 |---------|-------|---------|
-| **Speed & Agility** | $50/hr | 1-on-1 private session. Focus: explosive movement, lateral agility, reaction time. |
-| **Sport Specific** | $70/hr | 1-on-1 private session. Tailored to your sport's demands — footwork, skills, conditioning. |
-| **Small Group (2)** | $120/hr | 2 athletes per session. Competitive, shared energy, cost-effective. |
-| **Small Group (3)** | $180/hr | 3 athletes per session. Same as above, one extra person. |
+| **Community Member** | $10/month | 2 classes a month. Great for athletes starting consistent training. |
+| **Blue & White Member** | $30/month | 4 classes a month. Balanced option for steady progression. |
+| **Eagle Membership** | $60/month | Unlimited classes each month. Best for high-commitment athletes. |
 
 ---
 

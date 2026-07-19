@@ -14,10 +14,9 @@
   const AVAILABLE_DAYS = [1, 2, 3, 4, 5, 6];
 
   const SERVICES = [
-    { id: 'speed',      name: 'Speed & Agility',          price: '$50/hr' },
-    { id: 'sport',      name: 'Sport Specific Training',   price: '$70/hr' },
-    { id: 'group2',     name: 'Small Group (2 people)',    price: '$120/hr' },
-    { id: 'group3',     name: 'Small Group (3 people)',    price: '$180/hr' },
+    { id: 'community',  name: 'Community Member (2 classes/month)',         price: '$10/month' },
+    { id: 'bluewhite',  name: 'Blue & White Member (4 classes/month)',       price: '$30/month' },
+    { id: 'eagle',      name: 'Eagle Membership (unlimited classes/month)',  price: '$60/month' },
   ];
 
   const MONTHS = [

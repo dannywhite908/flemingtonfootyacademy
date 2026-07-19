@@ -7,20 +7,20 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --green:       #158F5A;
-  --green-dark:  #0F6B47;
-  --green-light: #1FA868;
-  --gold:        #bdad1e;
-  --gold-light:  #d4c92f;
-  --gold-dark:   #9a8816;
-  --grey:        #59635E;
-  --grey-light:  #7A8078;
-  --grey-dark:   #3F4539;
+  --green:       #001f63;
+  --green-dark:  #001447;
+  --green-light: #0a358f;
+  --gold:        #c3c8d1;
+  --gold-light:  #dde1e7;
+  --gold-dark:   #9ca4b2;
+  --grey:        #5d6778;
+  --grey-light:  #8891a1;
+  --grey-dark:   #3b4658;
   --white:       #FFFFFF;
-  --off-white:   #F8F9FA;
-  --light-gray:  #E9ECEF;
-  --mid-gray:    #59635E;
-  --dark-text:   #2D3531;
+  --off-white:   #f5f7fa;
+  --light-gray:  #e3e7ee;
+  --mid-gray:    #5d6778;
+  --dark-text:   #142849;
   --font-head:   'Montserrat', sans-serif;
   --font-body:   'Open Sans', sans-serif;
   --radius:      8px;
@@ -83,13 +83,13 @@ ul { list-style: none; }
   background: var(--gold);
   color: var(--green);
 }
-.btn-gold:hover { background: var(--gold-dark); box-shadow: 0 6px 20px rgba(189,173,30,0.4); }
+.btn-gold:hover { background: var(--gold-dark); box-shadow: 0 6px 20px rgba(156,164,178,0.45); }
 
 .btn-navy {
   background: var(--green);
   color: var(--white);
 }
-.btn-navy:hover { background: var(--green-dark); box-shadow: 0 6px 20px rgba(21,143,90,0.4); }
+.btn-navy:hover { background: var(--green-dark); box-shadow: 0 6px 20px rgba(0,31,99,0.45); }
 
 .btn-outline-white {
   background: transparent;
@@ -1801,15 +1801,9 @@ textarea.form-input {
 .footer-logo-mark {
   width: 40px;
   height: 40px;
-  background: var(--gold);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-head);
-  font-weight: 900;
-  font-size: 1rem;
-  color: var(--green);
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--white);
   flex-shrink: 0;
 }
 
