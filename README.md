@@ -47,7 +47,7 @@ Training runs **Monday–Saturday, 8 AM–6 PM**.
 - **Email:** dannywhite908@gmail.com
 
 **Hours:** Monday–Saturday, 8 AM–6 PM  
-**Location:** Flemington, NJ Area (contact us for precise location details)
+**Location:** Flemington, Lambertville, Somerville, Bridgewater, East Amwell, and Delaware Township (contact us for precise location details)
 
 ---
 
